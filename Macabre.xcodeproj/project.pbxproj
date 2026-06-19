@@ -1,0 +1,877 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9350E0C12C9EA51E00B84875 /* Macabre Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9350E0C02C9EA51E00B84875 /* Macabre Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9350E0C62C9EA51E00B84875 /* MacabreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350E0C52C9EA51E00B84875 /* MacabreApp.swift */; };
+		9350E0CA2C9EA52000B84875 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9350E0C92C9EA52000B84875 /* Assets.xcassets */; };
+		9350E0CD2C9EA52000B84875 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9350E0CC2C9EA52000B84875 /* Preview Assets.xcassets */; };
+		9350E0D72C9EA52000B84875 /* Macabre_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350E0D62C9EA52000B84875 /* Macabre_Watch_AppTests.swift */; };
+		9350E0E12C9EA52000B84875 /* Macabre_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350E0E02C9EA52000B84875 /* Macabre_Watch_AppUITests.swift */; };
+		9350E0E32C9EA52000B84875 /* Macabre_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9350E0E22C9EA52000B84875 /* Macabre_Watch_AppUITestsLaunchTests.swift */; };
+		938EE5082CF1D1C00060AFA9 /* RealHealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938EE5072CF1D1B80060AFA9 /* RealHealthManager.swift */; };
+		93AACC0100000000000000A3 /* Macabre Watch Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 93AACC0100000000000000A1 /* Macabre Watch Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		93AACC0100000000000000F2 /* HeartbeatMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AACC0100000000000000F1 /* HeartbeatMath.swift */; };
+		93AACC0100000000000000F3 /* HeartbeatMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AACC0100000000000000F1 /* HeartbeatMath.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9350E0C22C9EA51E00B84875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9350E0B42C9EA51E00B84875 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9350E0BF2C9EA51E00B84875;
+			remoteInfo = "Macabre Watch App";
+		};
+		9350E0D32C9EA52000B84875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9350E0B42C9EA51E00B84875 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9350E0BF2C9EA51E00B84875;
+			remoteInfo = "Macabre Watch App";
+		};
+		9350E0DD2C9EA52000B84875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9350E0B42C9EA51E00B84875 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9350E0BF2C9EA51E00B84875;
+			remoteInfo = "Macabre Watch App";
+		};
+		93AACC0100000000000000A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9350E0B42C9EA51E00B84875 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93AACC0100000000000000AA;
+			remoteInfo = "Macabre Watch Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9350E0E92C9EA52000B84875 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9350E0C12C9EA51E00B84875 /* Macabre Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93AACC0100000000000000A4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				93AACC0100000000000000A3 /* Macabre Watch Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9330901E2CF239F000E91B0A /* Macabre-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Macabre-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9350E0BA2C9EA51E00B84875 /* Macabre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macabre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9350E0C02C9EA51E00B84875 /* Macabre Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Macabre Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9350E0C52C9EA51E00B84875 /* MacabreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacabreApp.swift; sourceTree = "<group>"; };
+		9350E0C92C9EA52000B84875 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9350E0CC2C9EA52000B84875 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9350E0D22C9EA52000B84875 /* Macabre Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Macabre Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9350E0D62C9EA52000B84875 /* Macabre_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macabre_Watch_AppTests.swift; sourceTree = "<group>"; };
+		9350E0DC2C9EA52000B84875 /* Macabre Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Macabre Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9350E0E02C9EA52000B84875 /* Macabre_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macabre_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		9350E0E22C9EA52000B84875 /* Macabre_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Macabre_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		938EE5072CF1D1B80060AFA9 /* RealHealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealHealthManager.swift; sourceTree = "<group>"; };
+		93AACC0100000000000000F1 /* HeartbeatMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartbeatMath.swift; sourceTree = "<group>"; };
+		93AACC0100000000000000A1 /* Macabre Watch Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Macabre Watch Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93F536312C9EA8BE002F3ECB /* Macabre Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Macabre Watch App.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		93AACC0100000000000000AE /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 93AACC0100000000000000AA /* Macabre Watch Widget */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		938EE4F62CF1CFAC0060AFA9 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		93AACC0100000000000000A2 /* Macabre Watch Widget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (93AACC0100000000000000AE /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = "Macabre Watch Widget"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9350E0BD2C9EA51E00B84875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0CF2C9EA52000B84875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0D92C9EA52000B84875 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93AACC0100000000000000A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93AACC0100000000000000F4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				93AACC0100000000000000F1 /* HeartbeatMath.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9350E0B32C9EA51E00B84875 = {
+			isa = PBXGroup;
+			children = (
+				93AACC0100000000000000F4 /* Shared */,
+				9350E0C42C9EA51E00B84875 /* Macabre Watch App */,
+				9350E0D52C9EA52000B84875 /* Macabre Watch AppTests */,
+				9350E0DF2C9EA52000B84875 /* Macabre Watch AppUITests */,
+				93AACC0100000000000000A2 /* Macabre Watch Widget */,
+				9350E0BB2C9EA51E00B84875 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9350E0BB2C9EA51E00B84875 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93AACC0100000000000000A1 /* Macabre Watch Widget.appex */,
+				9350E0BA2C9EA51E00B84875 /* Macabre.app */,
+				9350E0C02C9EA51E00B84875 /* Macabre Watch App.app */,
+				9350E0D22C9EA52000B84875 /* Macabre Watch AppTests.xctest */,
+				9350E0DC2C9EA52000B84875 /* Macabre Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9350E0C42C9EA51E00B84875 /* Macabre Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				9330901E2CF239F000E91B0A /* Macabre-Watch-App-Info.plist */,
+				938EE4F62CF1CFAC0060AFA9 /* Views */,
+				93F536312C9EA8BE002F3ECB /* Macabre Watch App.entitlements */,
+				9350E0C52C9EA51E00B84875 /* MacabreApp.swift */,
+				938EE5072CF1D1B80060AFA9 /* RealHealthManager.swift */,
+				9350E0C92C9EA52000B84875 /* Assets.xcassets */,
+				9350E0CB2C9EA52000B84875 /* Preview Content */,
+			);
+			path = "Macabre Watch App";
+			sourceTree = "<group>";
+		};
+		9350E0CB2C9EA52000B84875 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9350E0CC2C9EA52000B84875 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9350E0D52C9EA52000B84875 /* Macabre Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9350E0D62C9EA52000B84875 /* Macabre_Watch_AppTests.swift */,
+			);
+			path = "Macabre Watch AppTests";
+			sourceTree = "<group>";
+		};
+		9350E0DF2C9EA52000B84875 /* Macabre Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9350E0E02C9EA52000B84875 /* Macabre_Watch_AppUITests.swift */,
+				9350E0E22C9EA52000B84875 /* Macabre_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Macabre Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9350E0B92C9EA51E00B84875 /* Macabre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9350E0EA2C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre" */;
+			buildPhases = (
+				9350E0B82C9EA51E00B84875 /* Resources */,
+				9350E0E92C9EA52000B84875 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9350E0C32C9EA51E00B84875 /* PBXTargetDependency */,
+			);
+			name = Macabre;
+			productName = Macabre;
+			productReference = 9350E0BA2C9EA51E00B84875 /* Macabre.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		9350E0BF2C9EA51E00B84875 /* Macabre Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9350E0E62C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre Watch App" */;
+			buildPhases = (
+				9350E0BC2C9EA51E00B84875 /* Sources */,
+				9350E0BD2C9EA51E00B84875 /* Frameworks */,
+				9350E0BE2C9EA51E00B84875 /* Resources */,
+				93AACC0100000000000000A4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93AACC0100000000000000A9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				938EE4F62CF1CFAC0060AFA9 /* Views */,
+			);
+			name = "Macabre Watch App";
+			productName = "Macabre Watch App";
+			productReference = 9350E0C02C9EA51E00B84875 /* Macabre Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9350E0D12C9EA52000B84875 /* Macabre Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9350E0ED2C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre Watch AppTests" */;
+			buildPhases = (
+				9350E0CE2C9EA52000B84875 /* Sources */,
+				9350E0CF2C9EA52000B84875 /* Frameworks */,
+				9350E0D02C9EA52000B84875 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9350E0D42C9EA52000B84875 /* PBXTargetDependency */,
+			);
+			name = "Macabre Watch AppTests";
+			productName = "Macabre Watch AppTests";
+			productReference = 9350E0D22C9EA52000B84875 /* Macabre Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9350E0DB2C9EA52000B84875 /* Macabre Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9350E0F02C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre Watch AppUITests" */;
+			buildPhases = (
+				9350E0D82C9EA52000B84875 /* Sources */,
+				9350E0D92C9EA52000B84875 /* Frameworks */,
+				9350E0DA2C9EA52000B84875 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9350E0DE2C9EA52000B84875 /* PBXTargetDependency */,
+			);
+			name = "Macabre Watch AppUITests";
+			productName = "Macabre Watch AppUITests";
+			productReference = 9350E0DC2C9EA52000B84875 /* Macabre Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		93AACC0100000000000000AA /* Macabre Watch Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93AACC0100000000000000AD /* Build configuration list for PBXNativeTarget "Macabre Watch Widget" */;
+			buildPhases = (
+				93AACC0100000000000000A7 /* Sources */,
+				93AACC0100000000000000A5 /* Frameworks */,
+				93AACC0100000000000000A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				93AACC0100000000000000A2 /* Macabre Watch Widget */,
+			);
+			name = "Macabre Watch Widget";
+			productName = "Macabre Watch Widget";
+			productReference = 93AACC0100000000000000A1 /* Macabre Watch Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9350E0B42C9EA51E00B84875 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					9350E0B92C9EA51E00B84875 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					9350E0BF2C9EA51E00B84875 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					9350E0D12C9EA52000B84875 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 9350E0BF2C9EA51E00B84875;
+					};
+					9350E0DB2C9EA52000B84875 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 9350E0BF2C9EA51E00B84875;
+					};
+					93AACC0100000000000000AA = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 9350E0B72C9EA51E00B84875 /* Build configuration list for PBXProject "Macabre" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9350E0B32C9EA51E00B84875;
+			productRefGroup = 9350E0BB2C9EA51E00B84875 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9350E0B92C9EA51E00B84875 /* Macabre */,
+				9350E0BF2C9EA51E00B84875 /* Macabre Watch App */,
+				9350E0D12C9EA52000B84875 /* Macabre Watch AppTests */,
+				9350E0DB2C9EA52000B84875 /* Macabre Watch AppUITests */,
+				93AACC0100000000000000AA /* Macabre Watch Widget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9350E0B82C9EA51E00B84875 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0BE2C9EA51E00B84875 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9350E0CD2C9EA52000B84875 /* Preview Assets.xcassets in Resources */,
+				9350E0CA2C9EA52000B84875 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0D02C9EA52000B84875 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0DA2C9EA52000B84875 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93AACC0100000000000000A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9350E0BC2C9EA51E00B84875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9350E0C62C9EA51E00B84875 /* MacabreApp.swift in Sources */,
+				938EE5082CF1D1C00060AFA9 /* RealHealthManager.swift in Sources */,
+				93AACC0100000000000000F2 /* HeartbeatMath.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0CE2C9EA52000B84875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9350E0D72C9EA52000B84875 /* Macabre_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9350E0D82C9EA52000B84875 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9350E0E32C9EA52000B84875 /* Macabre_Watch_AppUITestsLaunchTests.swift in Sources */,
+				9350E0E12C9EA52000B84875 /* Macabre_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93AACC0100000000000000A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93AACC0100000000000000F3 /* HeartbeatMath.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9350E0C32C9EA51E00B84875 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9350E0BF2C9EA51E00B84875 /* Macabre Watch App */;
+			targetProxy = 9350E0C22C9EA51E00B84875 /* PBXContainerItemProxy */;
+		};
+		9350E0D42C9EA52000B84875 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9350E0BF2C9EA51E00B84875 /* Macabre Watch App */;
+			targetProxy = 9350E0D32C9EA52000B84875 /* PBXContainerItemProxy */;
+		};
+		9350E0DE2C9EA52000B84875 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9350E0BF2C9EA51E00B84875 /* Macabre Watch App */;
+			targetProxy = 9350E0DD2C9EA52000B84875 /* PBXContainerItemProxy */;
+		};
+		93AACC0100000000000000A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93AACC0100000000000000AA /* Macabre Watch Widget */;
+			targetProxy = 93AACC0100000000000000A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9350E0E42C9EA52000B84875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9350E0E52C9EA52000B84875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		9350E0E72C9EA52000B84875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Macabre Watch App/Macabre Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Macabre Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Q4FG6TY2RZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Macabre-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Macabre;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Macabre reads your heart rate to show your live BPM and count down your remaining heartbeats.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = armandwegnez.Macabre.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		9350E0E82C9EA52000B84875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Macabre Watch App/Macabre Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Macabre Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = Q4FG6TY2RZ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Macabre-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Macabre;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Macabre reads your heart rate to show your live BPM and count down your remaining heartbeats.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = armandwegnez.Macabre.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		9350E0EB2C9EA52000B84875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4FG6TY2RZ;
+				INFOPLIST_KEY_CFBundleDisplayName = Macabre;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = armandwegnez.Macabre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9350E0EC2C9EA52000B84875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4FG6TY2RZ;
+				INFOPLIST_KEY_CFBundleDisplayName = Macabre;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = armandwegnez.Macabre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9350E0EE2C9EA52000B84875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "armandwegnez.Macabre-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Macabre Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Macabre Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		9350E0EF2C9EA52000B84875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "armandwegnez.Macabre-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Macabre Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Macabre Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		9350E0F12C9EA52000B84875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "armandwegnez.Macabre-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Macabre Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		9350E0F22C9EA52000B84875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "armandwegnez.Macabre-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Macabre Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+		93AACC0100000000000000AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Macabre Watch Widget/Macabre Watch Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4FG6TY2RZ;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Macabre Watch Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = armandwegnez.Macabre.watchkitapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		93AACC0100000000000000AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Macabre Watch Widget/Macabre Watch Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q4FG6TY2RZ;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Macabre Watch Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = armandwegnez.Macabre.watchkitapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9350E0B72C9EA51E00B84875 /* Build configuration list for PBXProject "Macabre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9350E0E42C9EA52000B84875 /* Debug */,
+				9350E0E52C9EA52000B84875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9350E0E62C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9350E0E72C9EA52000B84875 /* Debug */,
+				9350E0E82C9EA52000B84875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9350E0EA2C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9350E0EB2C9EA52000B84875 /* Debug */,
+				9350E0EC2C9EA52000B84875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9350E0ED2C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9350E0EE2C9EA52000B84875 /* Debug */,
+				9350E0EF2C9EA52000B84875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9350E0F02C9EA52000B84875 /* Build configuration list for PBXNativeTarget "Macabre Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9350E0F12C9EA52000B84875 /* Debug */,
+				9350E0F22C9EA52000B84875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93AACC0100000000000000AD /* Build configuration list for PBXNativeTarget "Macabre Watch Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93AACC0100000000000000AB /* Debug */,
+				93AACC0100000000000000AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9350E0B42C9EA51E00B84875 /* Project object */;
+}

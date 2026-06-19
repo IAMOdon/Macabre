@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Xcode build output
+build/
+DerivedData/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode per-user state
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods / Carthage (not used today, ignored for safety)
+Pods/
+Carthage/Build/
+
+# Signing material — never commit
+*.mobileprovision
+*.p12
+*.cer
+*.certSigningRequest
+
+# Misc
+*.log
