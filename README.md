@@ -9,8 +9,32 @@ complication so the number is always on your watch face.
 
 ---
 
+## Background
+
+The idea that a lifetime has a roughly fixed "heartbeat budget" isn't sci-fi — it's a real
+finding in cardiology and comparative physiology:
+
+- **Levine HJ. [Rest heart rate and life expectancy](https://pubmed.ncbi.nlm.nih.gov/9316546/).
+  *J Am Coll Cardiol.* 1997;30(4):1104–1106.** Across mammal species, heart rate and life
+  expectancy are inversely related, and their product — total heartbeats per lifetime — is
+  strikingly constant across species: ~7.3 × 10⁸ beats on average (wide variance by species),
+  or ~1 × 10⁹ by a second, energetics-based estimate given in the same paper.
+- Humans, with unusually long lifespans relative to their metabolic rate, land higher — commonly
+  cited in the 2–3 billion range. `MacabreConstants` reflects this: 70 bpm × 525,600 min/yr ×
+  80 yr ≈ 2.94 billion beats.
+- Further reading: [Rob Dunn Lab — Beats Per Life](https://robdunnlab.com/projects/beats-per-life/),
+  a public-science project on the same question (Rob Dunn is a PhD ecologist and professor at
+  NC State).
+
+Macabre turns this population-level statistic into a personal, live countdown — see
+**Known limitations / good first issues** below for exactly how far that personalization
+currently goes.
+
 ## Features
 
+- **Personal baseline** — a one-time birthdate prompt (`BirthDateInputView`)
+  seeds the countdown from your real age instead of a placeholder, and
+  persists it under the `BirthDate` key.
 - **Live heartbeat countdown** — decrements every second at your current BPM,
   falling back to a rolling average when no live reading is available.
 - **Heart-rate insights** — a live BPM chart with min / average / max.
@@ -71,7 +95,7 @@ To run the unit tests:
 ```sh
 xcodebuild test \
   -project Macabre.xcodeproj \
-  -scheme Macabre \
+  -scheme "Macabre Watch App" \
   -destination 'platform=watchOS Simulator,name=Apple Watch Ultra 3 (49mm)' \
   -only-testing:"Macabre Watch AppTests"
 ```
@@ -83,10 +107,10 @@ nothing to HealthKit and sends nothing off the watch.
 
 ## Known limitations / good first issues
 
-- **No birthday input yet.** The starting beat count is seeded from a neutral
-  placeholder age (`MacabreConstants.defaultAgeYears`). A small settings screen
-  that lets the user set their date of birth (persisted under the existing
-  `BirthDate` key) would make the count personal.
+- **Activity-weighted baseline.** The starting estimate is age-only —
+  `(life expectancy − age) × beats/year`, seeded via the `BirthDateInputView`
+  onboarding screen on first launch. Weighting it with real activity/workout
+  data, not just age, is a worthwhile follow-up.
 - **Localization.** The UI strings are currently French only.
 - **Swift 6 strict concurrency.** The code uses structured concurrency and is
   `@MainActor`-isolated, but the project still builds in the Swift 5 language

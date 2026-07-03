@@ -20,6 +20,9 @@ final class RealHealthManager: ObservableObject {
     @Published var currentHeartRate: Double = 0
     @Published var recentHeartRates: [Double] = []
     @Published var remainingHeartbeats: Int64 = 0
+    /// True until the user has supplied a real date of birth, so the UI knows
+    /// to show onboarding instead of the (placeholder-age-seeded) countdown.
+    @Published var needsBirthDate: Bool = false
 
     private let provider: HeartRateProviding
     private let defaults: UserDefaults
@@ -68,6 +71,7 @@ final class RealHealthManager: ObservableObject {
         self.defaults = defaults
         self.widgetDefaults = UserDefaults(suiteName: MacabreConstants.appGroupSuiteName)
         self.birthDate = Self.loadBirthDate(from: defaults)
+        self.needsBirthDate = defaults.object(forKey: MacabreConstants.DefaultsKey.birthDate) == nil
         loadState()
         startTicking()
         Task { await activateHealthKit() }
@@ -101,6 +105,25 @@ final class RealHealthManager: ObservableObject {
 
         applySimpleCatchUp()                 // immediate visual estimate
         Task { await performCatchUp() }      // precise HealthKit reconciliation
+    }
+
+    // MARK: - Birth date
+
+    /// Persists the user's real date of birth and immediately re-seeds the
+    /// countdown from it, replacing the placeholder-age estimate.
+    func setBirthDate(_ date: Date) {
+        birthDate = date
+        beatRemainder = 0
+        remainingHeartbeats = Self.seedBeats(forBirthDate: date)
+        persistedBeatsSnapshot = remainingHeartbeats
+        persistedDateSnapshot = Date()
+        needsBirthDate = false
+
+        let timestamp = date.timeIntervalSince1970
+        for store in [defaults, widgetDefaults].compactMap({ $0 }) {
+            store.set(timestamp, forKey: MacabreConstants.DefaultsKey.birthDate)
+        }
+        forceSave()
     }
 
     // MARK: - HealthKit activation
@@ -258,17 +281,25 @@ final class RealHealthManager: ObservableObject {
     }
 
     private func calculateInitialRemainingHeartbeats() {
-        let age = Calendar.current.dateComponents([.year], from: birthDate, to: Date()).year ?? 0
-        let remainingYears = max(0, MacabreConstants.averageLifeExpectancy - age)
-        remainingHeartbeats = Int64(remainingYears) * MacabreConstants.beatsPerYear
+        remainingHeartbeats = Self.seedBeats(forBirthDate: birthDate)
         persistedBeatsSnapshot = remainingHeartbeats
         persistedDateSnapshot = Date()
         forceSave()
     }
 
-    /// The seed birth date. Until a birthday-input screen exists, this defaults
-    /// to a neutral placeholder age (see `MacabreConstants.defaultAgeYears`);
-    /// a persisted value, once present, always wins.
+    /// (life expectancy − age) × beats/year — the shared seed formula used
+    /// both at first launch (placeholder age) and after the user sets a real
+    /// birth date via `setBirthDate(_:)`. Internal (not private) so it's
+    /// directly unit-testable, matching `HeartbeatTime`/`CatchUp`.
+    nonisolated static func seedBeats(forBirthDate birthDate: Date) -> Int64 {
+        let age = Calendar.current.dateComponents([.year], from: birthDate, to: Date()).year ?? 0
+        let remainingYears = max(0, MacabreConstants.averageLifeExpectancy - age)
+        return Int64(remainingYears) * MacabreConstants.beatsPerYear
+    }
+
+    /// The seed birth date. A persisted value (set via `setBirthDate(_:)` /
+    /// `BirthDateInputView`) always wins; before onboarding runs, this falls
+    /// back to a neutral placeholder age (see `MacabreConstants.defaultAgeYears`).
     private static func loadBirthDate(from defaults: UserDefaults) -> Date {
         if let saved = defaults.object(forKey: MacabreConstants.DefaultsKey.birthDate) as? TimeInterval {
             return Date(timeIntervalSince1970: saved)

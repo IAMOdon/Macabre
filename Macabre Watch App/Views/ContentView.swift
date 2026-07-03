@@ -9,15 +9,20 @@ struct ContentView: View {
     @State private var currentPage: Int = 0
 
     var body: some View {
-        TabView(selection: $currentPage) {
-            ResultView()
-                .tag(0)
+        if healthManager.needsBirthDate {
+            BirthDateInputView()
+                .environmentObject(healthManager)
+        } else {
+            TabView(selection: $currentPage) {
+                ResultView()
+                    .tag(0)
 
-            BPMInsightsView(recentHeartRates: healthManager.recentHeartRates)
-                .tag(1)
+                BPMInsightsView(recentHeartRates: healthManager.recentHeartRates)
+                    .tag(1)
+            }
+            .tabViewStyle(.verticalPage)
+            .environmentObject(healthManager)
         }
-        .tabViewStyle(.verticalPage)
-        .environmentObject(healthManager)
     }
 }
 

@@ -90,6 +90,21 @@ final class CatchUpTests: XCTestCase {
     }
 }
 
+final class SeedBeatsTests: XCTestCase {
+
+    func testSeedsFromAgeUsingAverageLifeExpectancy() {
+        let birthDate = Calendar.current.date(byAdding: .year, value: -30, to: Date())!
+        let beats = RealHealthManager.seedBeats(forBirthDate: birthDate)
+        // 80 - 30 = 50 remaining years at the shared beats/year constant.
+        XCTAssertEqual(beats, 50 * MacabreConstants.beatsPerYear)
+    }
+
+    func testClampsToZeroPastAverageLifeExpectancy() {
+        let birthDate = Calendar.current.date(byAdding: .year, value: -90, to: Date())!
+        XCTAssertEqual(RealHealthManager.seedBeats(forBirthDate: birthDate), 0)
+    }
+}
+
 final class UserDefaultsInt64Tests: XCTestCase {
 
     private var defaults: UserDefaults!
