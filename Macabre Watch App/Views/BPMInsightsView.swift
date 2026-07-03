@@ -115,7 +115,7 @@ struct BPMInsightsView: View {
                                     .opacity(dotPulse ? 0.6 : 1.0)
                             }
                         } else {
-                            Text("En attente de données…")
+                            Text("Waiting for data…")
                                 .font(.system(size: 11, design: .rounded))
                                 .foregroundStyle(.white.opacity(0.25))
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -136,7 +136,7 @@ struct BPMInsightsView: View {
 
                 // Stats row — 3 compact glass pills
                 HStack(spacing: 5) {
-                    StatPill(label: "moy", value: "\(avgBPM)", color: lineColor)
+                    StatPill(label: "avg", value: "\(avgBPM)", color: lineColor)
                     StatPill(label: "min", value: "\(minBPM)", color: .blue)
                     StatPill(label: "max", value: "\(maxBPM)", color: .red)
                 }
@@ -155,7 +155,7 @@ struct BPMInsightsView: View {
 // MARK: - Stat pill
 
 private struct StatPill: View {
-    let label: String
+    let label: LocalizedStringKey
     let value: String
     let color: Color
 

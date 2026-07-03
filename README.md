@@ -44,6 +44,10 @@ currently goes.
 - **Offline-correct** — when the app is suspended, it reconciles the count
   against the heart rate HealthKit actually recorded while you were away, so the
   number stays honest without draining the battery in the background.
+- **English + French**, via String Catalogs (`Localizable.xcstrings` /
+  `InfoPlist.xcstrings`), following the system language. English is the
+  source language for new strings; add further locales by adding a
+  translation in the relevant catalog.
 
 ## Architecture
 
@@ -111,7 +115,6 @@ nothing to HealthKit and sends nothing off the watch.
   `(life expectancy − age) × beats/year`, seeded via the `BirthDateInputView`
   onboarding screen on first launch. Weighting it with real activity/workout
   data, not just age, is a worthwhile follow-up.
-- **Localization.** The UI strings are currently French only.
 - **Swift 6 strict concurrency.** The code uses structured concurrency and is
   `@MainActor`-isolated, but the project still builds in the Swift 5 language
   mode; adopting full Swift 6 strict-concurrency checking is a worthwhile

@@ -69,7 +69,7 @@ struct MainCountView: View {
             VStack(spacing: 6) {
                 Spacer()
 
-                Text("Il te reste")
+                Text("You have left")
                     .font(.system(size: 15, weight: .medium, design: .rounded))
                     .foregroundStyle(.white.opacity(0.5))
                     .textCase(.uppercase)
@@ -85,7 +85,7 @@ struct MainCountView: View {
                     .shadow(color: accentColor.opacity(0.3), radius: 20)
                     .padding(.horizontal, 16)
 
-                Text("battements de cœur")
+                Text("heartbeats")
                     .font(.system(size: 13, weight: .medium, design: .rounded))
                     .foregroundStyle(.white.opacity(0.4))
 
@@ -95,7 +95,7 @@ struct MainCountView: View {
                 HStack(spacing: 5) {
                     Image(systemName: "clock")
                         .font(.system(size: 10, weight: .semibold))
-                    Text("Détails")
+                    Text("Details")
                         .font(.system(size: 11, weight: .semibold, design: .rounded))
                 }
                 .foregroundStyle(.white.opacity(0.55))

@@ -1,0 +1,141 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "avg" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "moy"
+          }
+        }
+      }
+    },
+    "Confirm" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmer"
+          }
+        }
+      }
+    },
+    "Date of birth" : {
+      "extractionState" : "manual",
+      "comment" : "DatePicker label; hidden via .labelsHidden() but still read by VoiceOver",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date de naissance"
+          }
+        }
+      }
+    },
+    "days" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "jours"
+          }
+        }
+      }
+    },
+    "Details" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Détails"
+          }
+        }
+      }
+    },
+    "For a countdown that's truly yours" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour un compte à rebours qui te correspond vraiment"
+          }
+        }
+      }
+    },
+    "heartbeats" : {
+      "extractionState" : "manual",
+      "comment" : "Sub-label under the big beat count, e.g. \"You have left / 2,133,935,993 / heartbeats\"",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "battements de cœur"
+          }
+        }
+      }
+    },
+    "hours" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "heures"
+          }
+        }
+      }
+    },
+    "When were you born?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quand es-tu né·e ?"
+          }
+        }
+      }
+    },
+    "Waiting for data…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En attente de données…"
+          }
+        }
+      }
+    },
+    "years" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ans"
+          }
+        }
+      }
+    },
+    "You have left" : {
+      "extractionState" : "manual",
+      "comment" : "Label above the big beat count, e.g. \"You have left / 2,133,935,993 / heartbeats\"",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Il te reste"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

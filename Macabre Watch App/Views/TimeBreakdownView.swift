@@ -40,13 +40,13 @@ struct TimeBreakdownView: View {
 
                 // Row 1: years — days
                 HStack(spacing: 10) {
-                    GlassTimeUnit(value: tc.years, unit: "ans", accent: accentColor)
-                    GlassTimeUnit(value: tc.days, unit: "jours", accent: accentColor)
+                    GlassTimeUnit(value: tc.years, unit: "years", accent: accentColor)
+                    GlassTimeUnit(value: tc.days, unit: "days", accent: accentColor)
                 }
 
                 // Row 2: hours — minutes
                 HStack(spacing: 10) {
-                    GlassTimeUnit(value: tc.hours, unit: "heures", accent: accentColor)
+                    GlassTimeUnit(value: tc.hours, unit: "hours", accent: accentColor)
                     GlassTimeUnit(value: tc.minutes, unit: "min", accent: accentColor)
                 }
 
@@ -69,7 +69,7 @@ struct TimeBreakdownView: View {
 
 private struct GlassTimeUnit: View {
     let value: Int
-    let unit: String
+    let unit: LocalizedStringKey
     let accent: Color
     var compact: Bool = false
 

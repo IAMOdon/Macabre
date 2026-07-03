@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "d" : {
+      "extractionState" : "manual",
+      "comment" : "Abbreviation for 'days' in the compact widget complications (Rectangular chip label and the composed Inline/Corner strings)",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "j"
+          }
+        }
+      }
+    },
+    "Heartbeats and time remaining" : {
+      "extractionState" : "manual",
+      "comment" : "Widget gallery/picker description",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battements de cœur et temps restants"
+          }
+        }
+      }
+    },
+    "y" : {
+      "extractionState" : "manual",
+      "comment" : "Abbreviation for 'years' in the compact widget complications (Rectangular chip label and the composed Inline/Corner strings)",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "a"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

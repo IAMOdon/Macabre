@@ -30,19 +30,19 @@ struct BirthDateInputView: View {
             .blur(radius: 40)
 
             VStack(spacing: 10) {
-                Text("Quand es-tu né·e ?")
+                Text("When were you born?")
                     .font(.system(size: 15, weight: .semibold, design: .rounded))
                     .foregroundStyle(.white.opacity(0.85))
                     .multilineTextAlignment(.center)
 
-                Text("Pour un compte à rebours qui te correspond vraiment")
+                Text("For a countdown that's truly yours")
                     .font(.system(size: 10, weight: .medium, design: .rounded))
                     .foregroundStyle(.white.opacity(0.4))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
 
                 DatePicker(
-                    "Date de naissance",
+                    "Date of birth",
                     selection: $selectedDate,
                     in: ...Date(),
                     displayedComponents: .date
@@ -53,7 +53,7 @@ struct BirthDateInputView: View {
                     WKInterfaceDevice.current().play(.click)
                     healthManager.setBirthDate(selectedDate)
                 } label: {
-                    Text("Confirmer")
+                    Text("Confirm")
                         .font(.system(size: 13, weight: .semibold, design: .rounded))
                         .foregroundStyle(.black)
                         .padding(.horizontal, 18)

@@ -1,0 +1,18 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Macabre reads your heart rate to show your live BPM and count down your remaining heartbeats." : {
+      "extractionState" : "manual",
+      "comment" : "NSHealthShareUsageDescription — shown in the HealthKit authorization prompt",
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macabre lit ta fréquence cardiaque pour afficher ton BPM en direct et décompter tes battements de cœur restants."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

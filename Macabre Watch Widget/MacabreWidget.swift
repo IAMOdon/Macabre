@@ -143,8 +143,8 @@ struct MacabreRectangularView: View {
             }
 
             HStack(spacing: 3) {
-                timeChip("\(t.years)",   "a")
-                timeChip("\(t.days)",    "j")
+                timeChip("\(t.years)",   "y")
+                timeChip("\(t.days)",    "d")
                 timeChip("\(t.hours)",   "h")
                 timeChip("\(t.minutes)", "m")
             }
@@ -153,7 +153,7 @@ struct MacabreRectangularView: View {
     }
 
     @ViewBuilder
-    private func timeChip(_ value: String, _ unit: String) -> some View {
+    private func timeChip(_ value: String, _ unit: LocalizedStringKey) -> some View {
         HStack(spacing: 1) {
             Text(value)
                 .font(.system(.caption2, design: .rounded).weight(.semibold))
@@ -172,9 +172,15 @@ struct MacabreInlineView: View {
 
     var body: some View {
         let t = entry.timeLeft
+        // Abbreviations are resolved through the catalog individually, then
+        // composed with Text(verbatim:) — a single interpolated literal here
+        // would ask the catalog for one composite key instead of translating
+        // "y"/"d" on their own.
+        let y = String(localized: "y", comment: "Abbreviation for 'years' in the compact widget complications")
+        let d = String(localized: "d", comment: "Abbreviation for 'days' in the compact widget complications")
         HStack(spacing: 2) {
             Image(systemName: "heart.fill")
-            Text("\(entry.compactBeats) · \(t.years)a \(t.days)j")
+            Text(verbatim: "\(entry.compactBeats) · \(t.years)\(y) \(t.days)\(d)")
         }
     }
 }
@@ -187,11 +193,14 @@ struct MacabreCornerView: View {
 
     var body: some View {
         let t = entry.timeLeft
+        let y = String(localized: "y", comment: "Abbreviation for 'years' in the compact widget complications")
+        let d = String(localized: "d", comment: "Abbreviation for 'days' in the compact widget complications")
+        let h = String(localized: "h", comment: "Abbreviation for 'hours' in the compact widget complications")
         Text(entry.compactBeats)
             .font(.system(.body, design: .rounded).weight(.semibold))
             .foregroundStyle(dim ? .gray : .white)
             .widgetLabel {
-                Text("\(t.years)a \(t.days)j \(t.hours)h")
+                Text(verbatim: "\(t.years)\(y) \(t.days)\(d) \(t.hours)\(h)")
             }
     }
 }
@@ -224,7 +233,7 @@ struct MacabreWidget: Widget {
                 .containerBackground(.black, for: .widget)
         }
         .configurationDisplayName("Macabre")
-        .description("Battements de cœur et temps restants")
+        .description("Heartbeats and time remaining")
         .supportedFamilies([.accessoryRectangular, .accessoryInline, .accessoryCorner])
     }
 }
